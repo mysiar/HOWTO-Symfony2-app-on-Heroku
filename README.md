@@ -103,10 +103,19 @@ $ git push heroku master
 
 14. at this moment we have heroku configured for our symfony2 application and application deployed
  ```bash
-heroku open
+$ heroku open
 ```
  <img src="web/img/img1.png" width="600">
 
+15. create entity to play with database (AppBundle:Heroku),
+i made just one string 255 field called ***name***
+ ```bash
+$ ./app/console doctrine:generate:entity
+```
+16. crud with write actions and default the rest
+ ```bash
+ $ ./app/console doctrine:generate:crud AppBundle:Heroku
+ ```
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
