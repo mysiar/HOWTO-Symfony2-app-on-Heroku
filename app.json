@@ -3,7 +3,7 @@
   "description": "hdapp - example application for HOWTO",
   "repository": "https://github.com/mysiar/HOWTO-Symfony2-app-on-Heroku",
   "keywords": [
-    "symfony2"
+    "symfony2", "heroku", "howto"
   ],
   "success_url": "/heroku",
   "scripts": {
@@ -14,7 +14,7 @@
   ],
   "env": {
     "SYMFONY_ENV": {
-      "value":  "prod"
+      "value": "prod"
     }
   }
 }
