@@ -11,5 +11,10 @@
   },
   "addons": [
     "heroku-postgresql:hobby-dev"
-  ]
+  ],
+  "env": {
+    "SYMFONY_ENV": {
+      "value":  "prod"
+    }
+  }
 }
