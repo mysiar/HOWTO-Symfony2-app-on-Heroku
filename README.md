@@ -8,7 +8,7 @@ How to  deploy Symfony2 application with DB to Heroku
 ### Step by step guide
 
 1.  create symfony application
-```bash
+ ```bash
 #terminal
 $ symfony new hdapp lts
 ```
