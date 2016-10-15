@@ -121,9 +121,28 @@ $ ./app/console doctrine:generate:entity
 
 17. at this moment if we try to push our app to heroku it will fail as there is no link between the app and database that app requires
 
-18.
+18. create ***app.json*** file with content
+ ```json
+ {
+   "name": "Heroku Deployment Application",
+   "description": "hdapp - example application for HOWTO",
+   "repository": "https://github.com/mysiar/HOWTO-Symfony2-app-on-Heroku",
+   "keywords": [
+     "symfony2"
+   ],
+   "success_url": "/",
+   "scripts": {
+     "postdeploy": "php app/console doctrine:schema:create"
+   },
+   "addons": [
+     "heroku-postgresql:hobby-dev"
+   ]
+ }
+ ```
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
 2. https://devcenter.heroku.com/articles/git
 3. https://symfony.com/doc/2.8/deployment/heroku.html
+4. http://bayne.github.io/post/symfony-postgres-heroku/
+

@@ -1,0 +1,15 @@
+{
+  "name": "Heroku Deployment Application",
+  "description": "hdapp - example application for HOWTO",
+  "repository": "https://github.com/mysiar/HOWTO-Symfony2-app-on-Heroku",
+  "keywords": [
+    "symfony2"
+  ],
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "php app/console doctrine:schema:create"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
