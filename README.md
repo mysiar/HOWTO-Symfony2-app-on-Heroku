@@ -188,30 +188,37 @@ $ ./app/console doctrine:generate:entity
         }
 ```
 
-22. call heroke and ask for database :)
- ```bash
- $ heroku addons:add heroku-postgresql:hobby-dev
-```
-
-23. create db
- ```bash
- $ heroku run php app/console doctrine:schema:create
-```
-
-24. deploy app to heroku
+22. deploy app to heroku
  ```bash
  $ git push heroku master
 ```
 
-25. update schema
+23. call heroke and ask for database :)
+ ```bash
+ $ heroku addons:add heroku-postgresql:hobby-dev
+```
+
+24. create db
+ ```bash
+ $ heroku run php app/console doctrine:schema:create
+```
+
+25. deploy app to heroku
+ ```bash
+ $ git push heroku master
+```
+
+26. update schema
  ```bash
  $ heroku run php app/console doctrine:schema:update
 ```
 
-26. run application and go to /heroku
+27. run application and go to /heroku
  ```bash
  $ heroku open
 ```
+
+  <img src="web/img/img2.png" width="600">
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
