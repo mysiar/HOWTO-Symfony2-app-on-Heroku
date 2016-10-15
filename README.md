@@ -177,7 +177,7 @@ $ ./app/console doctrine:generate:entity
      ],
 ```
 
-21. update "extra" section in ***composer.json*** with
+21. update "extra" ""incenteev-parameters" section in ***composer.json*** with
  ```json
         "env-map": {
             "database_host": "DATABASE_HOST",
@@ -198,7 +198,20 @@ $ ./app/console doctrine:generate:entity
  $ heroku run php app/console doctrine:schema:create
 ```
 
-24.
+24. deploy app to heroku
+ ```bash
+ $ git push heroku master
+```
+
+25. update schema
+ ```bash
+ $ heroku run php app/console doctrine:schema:update
+```
+
+26. run application and go to /heroku
+ ```bash
+ $ heroku open
+```
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
