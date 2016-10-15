@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Herokus list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for heroku in herokus %}
+            <tr>
+                <td><a href="{{ path('heroku_show', { 'id': heroku.id }) }}">{{ heroku.id }}</a></td>
+                <td>{{ heroku.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('heroku_show', { 'id': heroku.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('heroku_edit', { 'id': heroku.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('heroku_new') }}">Create a new heroku</a>
+        </li>
+    </ul>
+{% endblock %}
