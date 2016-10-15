@@ -73,7 +73,8 @@ $ heroku create hdapp````
 $ git remote -f
 ```
 
- in my case result is
+  in my case result is
+
  ```bash
 
 heroku	https://git.heroku.com/hdapp.git (fetch)
