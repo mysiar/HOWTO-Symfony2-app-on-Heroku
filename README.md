@@ -193,7 +193,12 @@ $ ./app/console doctrine:generate:entity
  $ heroku addons:add heroku-postgresql:hobby-dev
 ```
 
-23.
+23. create db
+ ```bash
+ $ heroku run php app/console doctrine:schema:create
+```
+
+24.
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
