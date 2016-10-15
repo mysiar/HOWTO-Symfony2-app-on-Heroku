@@ -177,12 +177,23 @@ $ ./app/console doctrine:generate:entity
      ],
 ```
 
-21. call heroke and ask for database :)
+21. update "extra" section in ***composer.json*** with
+ ```json
+        "env-map": {
+            "database_host": "DATABASE_HOST",
+            "database_port": "DATABASE_PORT",
+            "database_name": "DATABASE_NAME",
+            "database_user": "DATABASE_USER",
+            "database_password": "DATABASE_PASSWORD"
+        }
+```
+
+22. call heroke and ask for database :)
  ```bash
  $ heroku addons:add heroku-postgresql:hobby-dev
 ```
 
-22.
+23.
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
