@@ -140,7 +140,7 @@ $ ./app/console doctrine:generate:entity
  }
  ```
 
- 19. create ***HerokuDatabase.php*** file with content
+19. create ***HerokuDatabase.php*** file with content
   ````  php
 
   <?php
@@ -170,7 +170,12 @@ $ ./app/console doctrine:generate:entity
   }
 ```
 
- 20.
+20. update "scripts" section in ***composer.json*** with
+ ```json
+ "pre-install-cmd": [
+       "HerokuDatabase::populateEnvironment"
+     ],
+```
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
