@@ -66,7 +66,8 @@ $ heroku login
 
 9. create application on heroku (in my case ***hdapp***)
  ```bash
-$ heroku create hdapp````
+$ heroku create hdapp
+````
 
 10. checking remote github repositories
  ```bash
