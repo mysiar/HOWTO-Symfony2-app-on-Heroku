@@ -112,7 +112,8 @@ i made just one string 255 field called ***name***
  ```bash
 $ ./app/console doctrine:generate:entity
 ```
-16. crud with write actions and default the rest
+
+16. crud with write actions and default the rest of parameters
  ```bash
  $ ./app/console doctrine:generate:crud AppBundle:Heroku
  $ ./app/console doctrine:schema:update --force
