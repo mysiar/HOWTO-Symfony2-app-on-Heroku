@@ -119,7 +119,9 @@ $ ./app/console doctrine:generate:entity
  $ ./app/console doctrine:schema:update --force
 ```
 
+17. at this moment if we try to push our app to heroku it will fail as there is no link between the app and database that app requires
 
+18.
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
