@@ -76,7 +76,6 @@ $ git remote -f
   in my case result is
 
  ```bash
-
 heroku	https://git.heroku.com/hdapp.git (fetch)
 heroku	https://git.heroku.com/hdapp.git (push)
 origin	https://github.com/mysiar/HOWTO-Symfony2-app-on-Heroku.git (fetch)
