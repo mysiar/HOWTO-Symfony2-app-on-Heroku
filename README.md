@@ -89,10 +89,12 @@ $ echo "web: bin/heroku-php-apache2 web/" > Procfile
 $ git add .
 $ git commit -m "Procfile for Apache and PHP"
 ```
+
 12. set heroku environment
  ```bash
 $ heroku config:set SYMFONY_ENV=prod
 ```
+
 13. push application to heroku
  ```bash
 $ git push heroku master
