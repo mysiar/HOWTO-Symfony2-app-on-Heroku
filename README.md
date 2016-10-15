@@ -177,6 +177,13 @@ $ ./app/console doctrine:generate:entity
      ],
 ```
 
+21. call heroke and ask for database :)
+ ```bash
+ $ heroku addons:add heroku-postgresql:hobby-dev
+```
+
+22.
+
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
 2. https://devcenter.heroku.com/articles/git
