@@ -1,5 +1,5 @@
 {
-    "name": "piotr/hdapp",
+    "name": "mysiar/hdapp",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -34,6 +34,9 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "pre-install-cmd": [
+            "HerokuDatabase::populateEnvironment"
         ],
         "post-install-cmd": [
             "@symfony-scripts"
