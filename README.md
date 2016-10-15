@@ -22,28 +22,28 @@ $ git commit -m 'initial commit'
 ```
 
 3.  edit **parameters.yml.dist** file and add
-```yaml
+ ```yaml
 # app/config/parameters.yml.dist
 parameters:
     database_driver: pdo_pgsql
 ```  
 
 4.   edit **parameters.yml** file and add your own required database driver (in my case) pdo_mysql
-```yaml
+ ```yaml
 # app/config/parameters.yml
 parameters:
     database_driver: pdo_mysql
 ```  
 
 5.   edit **config.yml** file and add at the begining of doctrine configuration
-```yaml
+ ```yaml
 # app/config/config.yml
 doctrine:
     dbal:
         driver:   "%database_driver%"
 ```
 6.  edit **config_prod.yml** and change *path* from "%kernel.logs_dir%/%kernel.environment%.log" to "php://stderr"
-```yaml
+ ```yaml
 # app/config/config_prod.yml
 monolog:
     # ...
@@ -55,29 +55,26 @@ monolog:
 ```
 
 7. check if your configuration works by
-```bash
-#terminal
+ ```bash
 $ ./app/console doctrine:database:create
 ```
 
 8.  log in to heroku using your credentials
-```bash
-#terminal
+ ```bash
 $ heroku login
 ```
+
 9. create application on heroku (in my case ***hdapp***)
-```bash
-#terminal
+ ```bash
 $ heroku create hdapp````
 
 10. checking remote github repositories
-```bash
-#terminal
+ ```bash
 $ git remote -f
 ```
  in my case result is
  ```bash
- #terminal
+
 heroku	https://git.heroku.com/hdapp.git (fetch)
 heroku	https://git.heroku.com/hdapp.git (push)
 origin	https://github.com/mysiar/HOWTO-Symfony2-app-on-Heroku.git (fetch)
@@ -85,26 +82,25 @@ origin	https://github.com/mysiar/HOWTO-Symfony2-app-on-Heroku.git (push)
 ```
 
 11. create procfile
-```bash
-#terminal
+ ```bash
 $ echo "web: bin/heroku-php-apache2 web/" > Procfile
 $ git add .
 $ git commit -m "Procfile for Apache and PHP"
 ```
 12. set heroku environment
-```bash
+ ```bash
 $ heroku config:set SYMFONY_ENV=prod
 ```
 13. push application to heroku
-```bash
+ ```bash
 $ git push heroku master
 ```
 
 14. at this moment we have heroku configured for our symfony2 application and application deployed
-```bash
+ ```bash
 heroku open
 ```
-<img src="web/img/img1.png" width="600">
+ <img src="web/img/img1.png" width="600">
 
 
 ### Information used
