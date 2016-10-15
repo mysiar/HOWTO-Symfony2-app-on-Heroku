@@ -1,6 +1,8 @@
 How to  deploy Symfony2 application with DB to Heroku
 =====
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ### Requirements
 1. Heroku account - signup at http://heroku.com
 2. Install Heroku Command Lin from https://devcenter.heroku.com/articles/heroku-command-line

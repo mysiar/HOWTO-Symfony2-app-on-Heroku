@@ -63,9 +63,7 @@
                 "database_user": "DATABASE_USER",
                 "database_password": "DATABASE_PASSWORD"
             }
-        },
-        "heroku": {
-            "framework": "symfony2"
+
         }
 
     }
