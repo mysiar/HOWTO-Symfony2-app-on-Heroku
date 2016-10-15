@@ -123,7 +123,7 @@ $ ./app/console doctrine:generate:entity
 
 17. at this moment if we try to push our app to heroku it will fail as there is no link between the app and database that app requires
 
-18. create ***app.json*** file with content - it is required for Deploy to Heroku button
+18. create ***app.json*** file with content - it is required for (https://www.herokucdn.com/deploy/button.svg) button
  ```json
  {
    "name": "Heroku Deployment Application",
