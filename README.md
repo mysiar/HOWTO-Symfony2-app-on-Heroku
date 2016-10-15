@@ -115,7 +115,10 @@ $ ./app/console doctrine:generate:entity
 16. crud with write actions and default the rest
  ```bash
  $ ./app/console doctrine:generate:crud AppBundle:Heroku
- ```
+ $ ./app/console doctrine:schema:update --force
+```
+
+
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
