@@ -72,6 +72,7 @@ $ heroku create hdapp````
  ```bash
 $ git remote -f
 ```
+
  in my case result is
  ```bash
 
