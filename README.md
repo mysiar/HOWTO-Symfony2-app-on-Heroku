@@ -122,7 +122,7 @@ $ ./app/console doctrine:generate:entity
 17. at this moment if we try to push our app to heroku it will fail as there is no link between the app and database that app requires
 
 18. create ***app.json*** file with content
- ```json
+ ```javascript
  {
    "name": "Heroku Deployment Application",
    "description": "hdapp - example application for HOWTO",
