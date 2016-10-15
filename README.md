@@ -122,7 +122,7 @@ $ ./app/console doctrine:generate:entity
 17. at this moment if we try to push our app to heroku it will fail as there is no link between the app and database that app requires
 
 18. create ***app.json*** file with content
- ```javascript
+ ```json
  {
    "name": "Heroku Deployment Application",
    "description": "hdapp - example application for HOWTO",
@@ -139,6 +139,38 @@ $ ./app/console doctrine:generate:entity
    ]
  }
  ```
+
+ 19. create ***HerokuDatabase.php*** file with content
+  ````  php
+
+  <?php
+  // src/HerokuDatabase.php
+
+  use Composer\Script\Event;
+
+  class HerokuDatabase
+  {
+      public static function populateEnvironment(Event $event)
+      {
+          $url = getenv("DATABASE_URL");
+
+          if ($url) {
+              $url = parse_url($url);
+              putenv("DATABASE_HOST={$url['host']}");
+              putenv("DATABASE_USER={$url['user']}");
+              putenv("DATABASE_PASSWORD={$url['pass']}");
+              $db = substr($url['path'],1);
+              putenv("DATABASE_NAME={$db}");
+          }
+
+          $io = $event->getIO();
+
+          $io->write("DATABASE_URL=".getenv("DATABASE_URL"));
+      }
+  }
+```
+
+ 20.
 
 ### Information used
 1. https://devcenter.heroku.com/articles/heroku-command-line
