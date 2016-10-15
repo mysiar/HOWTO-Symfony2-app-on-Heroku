@@ -14,7 +14,7 @@ $ symfony new hdapp lts
 ```
 
 2. initialize git repository for your new created application
-```bash
+ ```bash
 #terminal
 $ git init
 $ git add .
