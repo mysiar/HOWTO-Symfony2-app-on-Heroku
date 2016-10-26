@@ -55,6 +55,10 @@ monolog:
             # ...
             path: 'php://stderr'
 ```
+logs available running:
+```bash
+$ heroku logs --num 10
+```
 
 7. check if your configuration works by
  ```bash
